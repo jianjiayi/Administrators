@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="http://www.ssy1668.com/download/favicon.ico">
+    <title>上实源管理员系统</title>
+
+    <script>
+      var DEFAULT_VERSION = "9.0";
+      var ua = navigator.userAgent.toLowerCase();
+      var isIE = ua.indexOf("msie") > -1;
+      var safariVersion;
+      if (isIE) {
+        safariVersion = ua.match(/msie ([\d.]+)/)[1];   //获取浏览器版本号
+      }
+      if (safariVersion*1 <= DEFAULT_VERSION*1) {   //若版本号低于IE9，则跳转到如下页面
+        alert('您的浏览器版本过低，请前去下载');
+        alert('使用谷歌浏览器，体验性更好');
+        window.location.href = "https://www.google.cn/chrome/";    //提示页面（修改路径）
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    　　<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    　　<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://leaverou.github.com/prefixfree/prefixfree.min.js"></script>
+    <script src="http://www.zhangxinxu.com/study/js/mini/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
